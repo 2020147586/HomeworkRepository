@@ -1,0 +1,140 @@
+.h1-background {
+    background-color: cadetblue;
+    background-attachment: fixed;
+    padding: 20px;
+    margin: 0px;
+}
+h1{
+    text-align: center;
+    font-size: 3em;
+    font-family: fantasy;
+}
+
+.transparent {
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    outline: none;
+}
+
+h3 {
+    border: medium solid black;
+    border-left: none;
+    border-right: none;
+    width: 22%;
+    height: 3ex;
+}
+
+.url-text {
+    text-decoration: none;
+    font-size: 3ex;
+    font-family:'Times New Roman', Times, serif;
+    color: gray;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+.hide{
+    display: none;
+}
+
+.go-login:hover + .hide {
+    display: block;
+    color: red;
+    font-size: 1.7ex
+}
+
+.go-signUp:hover + .hide {
+    display: block;
+    color: red;
+    font-size: 1.7ex
+}
+
+.login-button {
+    padding: 5px 15px 5px;
+    margin: 0px;
+    background-color: aquamarine;
+}
+
+.signUp-button {
+    padding: 5px 15px 5px;
+    margin: 0px;
+    background-color:aqua;
+    color: black;
+}
+
+.clear-button {
+    padding: 5px 15px 5px;
+    margin: 0px;
+    background-color: red;
+}
+
+.index-page-body {
+    margin-left: auto;
+    margin-right: auto;
+    width: 1020px;
+    text-align: center;
+}
+
+.movingHeader {
+    position: relative;
+    animation-name: movingText;
+    animation-timing-function: linear;
+    animation-duration: 2s;
+}
+
+@keyframes movingText {
+    0% {left: 1020px}
+    25% {left: 765px}
+    50% {left: 510px}
+    70% {left: 255px}
+    100% {left: 0px}
+}
+
+header {
+    background-color: cadetblue;
+    background-attachment: fixed;
+    padding: 20px;
+    margin: 0px;
+}
+
+.section1 {
+    display: inline-block;
+    width: 400px;
+    height: 500px;
+    padding: 20px;
+}
+
+.img1 {
+    height: 80%;
+    width: 80%;
+    float: center;
+    transition: transform 2s;
+}
+
+.img1:hover {
+    transform: rotate(360deg)
+}
+
+.section2 {
+    display: inline-block;
+    width: 400px;
+    height: 500px;
+    padding: 20px
+}
+
+.img2 {
+    height: 80%;
+    width: 80%;
+    float: center;
+    transition: width 2s, height 2s;
+}
+
+.img2:hover {
+    width: 100%;
+    height: 100%;
+}
