@@ -184,7 +184,7 @@ footer {
 
 .flex-container {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap : wrap;
     justify-content: center;
 }
@@ -219,7 +219,8 @@ h2 {
 }
 @media screen and (max-width: 480px) {
     .index-page-body {width: 100%;}
-    .flexible-container .horizontal{flex-direction: column;}
+    .flexible-container {flex-direction: column;}
+    .horizontal{flex-direction: column;}
     .horizontal {
         flex: 100%;
     }
@@ -227,7 +228,8 @@ h2 {
 
 @media screen and (max-width: 800px) {
     .index-page-body{width: 100%;}
-    .flexible-container .horizontal{flex-direction: column;}
+    .flexible-container {flex-direction: column;}
+    .horizontal{flex-direction: column;}
     .horizontal {
         flex: 48.708%;
     }
