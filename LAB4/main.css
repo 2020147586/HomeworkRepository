@@ -81,7 +81,6 @@ a{
     margin-left: auto;
     margin-right: auto;
     width: 1020px;
-    width: 100%;
     text-align: center;
 }
 
@@ -219,6 +218,7 @@ h2 {
     vertical-align: middle;
 }
 @media screen and (max-width: 480px) {
+    .index-page-body {width: 100%;}
     .flexible-container .horizontal{flex-direction: column;}
     .horizontal {
         flex: 100%;
@@ -226,10 +226,15 @@ h2 {
 }
 
 @media screen and (max-width: 800px) {
+    .index-page-body{width: 100%;}
     .flexible-container .horizontal{flex-direction: column;}
     .horizontal {
         flex: 48.708%;
     }
+}
+@media  screen and (max-width: 1020px) {
+    .index-page-body{width: 100%;}
+    
 }
 
 footer {
