@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Heng Book Shop Login Page</title>
+        <link rel = "stylesheet" type = "text/css" href = "main.css">
+    </head>
+    <body>
+        <h1 class = "h1-background">Welcome to Heng's Book Shop</h1>
+        <!--
+        <h3 class = "go-signUp">
+            <button class = "transparent">
+                <a class = "url-text" href = "signup.html">Sign Up</a>
+            </button>
+        </h3>
+        -->
+        <nav>
+            <a class = "url-text" href = "index.html">Main Page</a> |
+            <a class = "url-text current-page" href = "login.html">Login</a> |
+            <a class = "url-text" href = "signup.html">Sign Up</a>
+        </nav>
+        <!--
+        <p class = "hide">Don't have User ID? Create it!</p>
+        -->
+        <form method = "GET" action = "login.html">
+            <p>
+                <label>
+                    User ID: <input name = "ID" type = "text" pattern = "[A-Za-z]{6,12}" 
+                    placeholder="Enter User ID" autofocus required/>
+                </label>
+            </p>
+            <p>
+                <label>
+                    Password: <input name = "password" type ="password" minlength="8" maxlength="12" 
+                    placeholder="Enter Password" autocomplete = "off" required/>
+                </label>
+            </p>
+            <p>
+                <input class = "login-button" name = "login" type = "submit" value = "login"/>
+                <input class = "clear-button" name = "cancel" type = "reset" value = "Clear"/>
+                <button class = "signUp-button">
+                    <a href = "signup.html">Sign Up</a>
+                </button>
+            </p>
+        </form>
+
+    </body>
+</html>
