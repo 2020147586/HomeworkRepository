@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="utf-8">
+    <title>Heng Book Shop Main Page</title>
+    <link rel = "stylesheet" type = "text/css" href = "main.css">
+
+    <body class = "index-page-body">
+
+        <div class = "flex-container">
+
+            <div class = "imageBorder menu">
+                
+                <p>Choose a category: </p>
+                    <button id = "All" selected value = "All">All</button>
+                    <button id = "Python"> Python</button>
+                    <button> HTML</button>
+                <form action="./product.json" methond = "POST">
+                    <p>Enter search term:</p>
+                    <input type = "search"><br>
+                    <button id = "button" >button</button>
+                </form>
+            </div>
+            <div class = "verticle items">
+
+            </div>
+
+        </div>
+
+    </body>
+
+    <script>
+        documnet.getElementById("Python").addEventListener("click", loadPython());
+
+
+        function loadPython() {
+            fetch("product.json")
+            .then(function(response) {
+                console.log(response);
+            })
+        }
+        
+    </script>
+</html>

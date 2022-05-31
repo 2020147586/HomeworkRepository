@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Heng Book Shop Main Page</title>
+        <link rel = "stylesheet" type = "text/css" href = "main.css">
+    </head>
+    <body class = "index-page-body">
+        <header>
+            <h1>Welcome to Heng's Book Shop</h1>
+        </header>
+        <nav class = "flexible-container">
+            <a class = "url-text current-page" href = "index.html">Main Page</a> 
+            <a class = "url-text" href = "login.html">Login</a> 
+            <a class = "url-text" href = "signup.html">Sign Up</a>
+        </nav>
+        <h2>Top 4 Books</h2>
+        <div class = "flex-container">
+            <div class = "imageBorder menu">
+                <p>Choose a category: </p>
+                <select class = "categories">
+                    <option id = "All" selected value = "All">All</option>
+                    <option id = "Python" onclick = "loadPython()">Python</option>
+                    <option id = "HTML" onClick = "reply_click(this.id)">HTML</option>
+                </select>
+            </div>
+
+            <div class = "verticle items">
+            </div>
+        </div>
+        <section>
+            <h2>Company Introduction</h2>
+            <p>We immediately find books for customers based on customers' needs, so customers can reduce their time spending on research about books.
+                Also, we provide books information in details that helpful for customers to choose books.
+            </p>
+        </section>
+        <footer>
+            <p>Contact us</p>
+            <p>Email: wuheng@yonsei.ac.kr</p>
+        </footer>
+    </body>
+    <script>
+
+        function loadItems() {
+            return fetch("./product.json")
+                .then((response) => response.json())
+                .then((json) => json.items) // json.python하면 python category 보여줌, json.items은 전부, json.HTML은 HTML
+        }
+
+        loadItems().then((items) => {
+            console.log(items);
+            displayItems(items);
+        });
+
+        function displayItems(items) {
+            const container = document.querySelector(".items");
+            container.innerHTML = items.map((item) => createHTMLString(item)).join("");
+        }
+
+        function createHTMLString(item) {
+            return`
+            <div class = "imageBorder horizontal">
+                <img src = "${item.image}" width = 20% alt = "${item.title}">
+            </div>`;
+        }
+
+        /*
+        Window.addEventListener("scroll", function() {
+            if Window.scrollTop + Window.clientHeight >= Window.scrollHeight) {
+                loadItems();
+            }
+        });
+        */
+
+    </script>
+</html>
+
